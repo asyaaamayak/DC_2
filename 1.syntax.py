@@ -30,10 +30,20 @@ boolean = True # False # булев тип данных
 # print(s)
 
 # *** арифметические операторы ***
-х = 10
-y = 2
+# х = 10
+# y = 2
 # print( х + y )
 # print( х / y )
 # print ( х // y )#целочисленное деление 
 # print( х ** y ) #возведение в степень
 # print ( х % y) # деление по остатку
+# print("как тебя зовут?")
+# name = input()
+# print("привет, " + name + "!")
+
+# a = float(input())
+# b = float(input())
+# print(a + b)
+ 
+# х, y, z = 2, 5.1, "hello"
+# print(х, y, z)
