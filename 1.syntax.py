@@ -41,9 +41,11 @@ boolean = True # False # булев тип данных
 # name = input()
 # print("привет, " + name + "!")
 
-# a = float(input())
-# b = float(input())
-# print(a + b)
+a = float(input())
+b = float(input())
+print(a + b)
  
-# х, y, z = 2, 5.1, "hello"
-# print(х, y, z)
+х, y, z = 2, 5.1, "hello"
+print(х, y, z)
+
+

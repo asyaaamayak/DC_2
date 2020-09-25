@@ -51,24 +51,38 @@ b = 10
 
 # **** Простой калькулятор ****
 
-num_1 = int(input("Введите первое число: "))
-num_2 = int(input("Введите второе число: "))
+# snum_1 = int(input("Введите первое число: "))
+# num_2 = int(input("Введите второе число: "))
 
-operation = input("Введите символ операции (+, -, *, /): ")
+# operation = input("Введите символ операции (+, -, *, /): ")
 
-if operation == "+":
-    res = num_1 + num_2
-elif operation == "-":
-    res = num_1 - num_2
-elif operation == "*":
-    res = num_1 * num_2
-elif operation == "/":
-    res = num_1 / num_2
-else:
-    res = "введенный символ не корректный!!!"
+# if operation == "+":
+#     res = num_1 + num_2
+# elif operation == "-":
+#     res = num_1 - num_2
+# elif operation == "*":
+#     res = num_1 * num_2
+# elif operation == "/":
+#     res = num_1 / num_2
+# else:
+#     res = "введенный символ не корректный!!!"
 
-print(f"результат: {res}")
+# print(f"результат: {res}")
+
+
+# if x > 5
+#     print("введенное число больше 5")
+    
+# x = int(input())
+# if x > 10:
+    # print("введенное число больше 10")
+    # y  = int(input())
+    # y < 20
+    # print( x * y)
+# print("конец программы")
 
 
 
+# конструкция if-elif-else
+# оператор elif-иначе, если...(else if)
 
