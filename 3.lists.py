@@ -92,4 +92,4 @@ b = ["Sasha", "Masha", "Kesha", "Valya", "Kris"]
 # print(b)
 
 x = a.count(23)
-print(x)
+print(x) 
