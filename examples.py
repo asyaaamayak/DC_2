@@ -38,11 +38,22 @@
 # or    логический оператор "ИЛИ"
 # not   логический оператор "НЕ"
 
-x = int(input())
-y = int(input())
-z = int(input())
-if not (x == 32 or y == 32 or z == 32):
-    print("условие истинно")
-else:
-    print("условие ложное") 
+# x = int(input())
+# y = int(input())
+# z = int(input())
+# if not (x == 32 or y == 32 or z == 32):
+#     print("условие истинно")
+# else:
+#     print("условие ложное") 
 
+# СЛОВАРИ (dictionary), тип данных - dict
+
+# population = {"Moscow" : 12615000, 'Ufa' : 1124000,'Omsk' : 1165000, 'Tula' : 488000 }
+# numbers = {'Vanya' : 23200, 'Anya' : 473728, 'Katya' : 454700, 'Olya'
+# : 422525}
+# city = input('ввведите город:')
+# print(['Численность населения:', population[city]])
+
+# numbers = {'Vanya' : 23, 'Anya' : 47, 'Katya' : 16, 'Olya': 22}
+# age = input('введите имя:')
+# print(['Возраст людей:', numbers.get[age]])
