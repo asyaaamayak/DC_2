@@ -48,12 +48,15 @@
 
 # СЛОВАРИ (dictionary), тип данных - dict
 
-# population = {"Moscow" : 12615000, 'Ufa' : 1124000,'Omsk' : 1165000, 'Tula' : 488000 }
+population = {"Moscow" : 12615000, 'Ufa' : 1124000,'Omsk' : 1165000, 'Tula' : 488000 }
 # numbers = {'Vanya' : 23200, 'Anya' : 473728, 'Katya' : 454700, 'Olya'
 # : 422525}
+population["Kiev"] = 24087492 #добавление 1го элемента 
+population.update({"Penza" : 47593270, "Piter" : 5284905,"Kursk" : 1937920 }) # добавлене несокольких элементов 
 # city = input('ввведите город:')
-# print(['Численность населения:', population[city]])
+print(population)
 
 # numbers = {'Vanya' : 23, 'Anya' : 47, 'Katya' : 16, 'Olya': 22}
 # age = input('введите имя:')
-# print(['Возраст людей:', numbers.get[age]])
+# print('Возраст:', numbers.get(age,"Нет данных"))   
+
