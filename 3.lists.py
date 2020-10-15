@@ -62,12 +62,18 @@
 
 
 # # **** срезы (slice)****
+# Срезы [СТАРТ:СТОП:ШАГ]
 
 # c = c+ [9,10,11,12,13]
 
-# c_slice = c[0:3] # срез с 0 индекса по 3й индекс не включительно
+# c_slice = c[0:3] # срез с 0 индекса по 3й индекс не включительно 
 # c_slice = c[:3] # срез с 0 индекса по 3й индекс не включительно
 # c_slice = c[1:4] # срез с 1 индекса по 4 индекс не включительно
+
+
+# lst = ["ook", "nice", "great", "cool", "awesome"]
+# lst[:3] = ["hey", "hi"]
+# print(lst)
 
 # c_slice = c[1:8:2] # срез с 1 индекса по 8 индекс не включительно с шагом 2
 
@@ -81,15 +87,17 @@
 list = ["Reykjavik", "Kopavougur", "Hvaregardi","Husavik"] # длинаи списка, 4 элемента
 # print("Name of sities in Iceland:", len(list))
 # print(list[3]) # выявление номера индекса в списке
-# print(list[-1]) # отрицательные индексы 
+# print(list[-2]) # отрицательные индексы 
 
 # s = "eyjafjallajökull" #длина строки 16 элементов
 # print(len(s))
 
 a = [23, 4, 30, -3, 0, 12, 2, 5, 2, 5, 23, 5, 35]
 b = ["Sasha", "Masha", "Kesha", "Valya", "Kris"]
+a.sort(reverse=True)
+b.sort(reverse=True)
 # b. append("Tanya") # append-добавление в список 
-# print(b)
+print(a, b)
 
-x = a.count(23)
-print(x) 
+# x = a.count(23)
+# print(x) 
