@@ -91,9 +91,138 @@ def func_8(**kwargs):
 
 # *** пример. Данные человека
 
-def person_data_parser(**args):
-    for parameter, value in args.items():
-        print(f"{parameter} : {value}")
+# def person_data_parser(**args):
+#     for parameter, value in args.items():
+#       print(f"{parameter} : {value}")
 
-person_data_parser(name="Asya", age="29", prog_lang="python")
-person_data_parser(name="Chris", age="25")
+# person_data_parser(name="Asya", age="29", prog_lang="python")
+# person_data_parser(name="Chris", age="25")
+
+
+# Вариант 3. Функция, которая возвращает значение 
+
+# определение (саздание) функций, которая возвращает значение переменной z
+
+def func_9(x, y):
+    z = x + y
+    return z
+
+# вызов (применение) функции
+result = func_9(10, 20)
+
+# print(result)
+
+# возвращение нескольких значений
+def func_10(a, b):
+    res_1 = a ** 2
+    res_2 = b ** 3
+    return res_1, res_2
+
+# print(func_10(2, 3))
+
+
+# присвоение нескольких возвращаемых функцией значений в переменные
+val_1, val_2 = func_10(2, 3)
+
+# print(val_1, val_2)
+
+# *** Безымянная функция (лямбда выражение, лямбда-функции)***
+
+# создание лямбды
+foo = lambda x, y: (x + y)**2
+# вызов лямбды выражения
+result = foo(2, 4)
+
+# print(result)
+
+# Лямбда внутри списка
+
+# my_lambdas = [lambda arg: arg** i for i in range(5)]
+
+my_lambdas = [lambda arg: arg ** 2, lambda arg: arg ** 3, lambda arg: arg ** 4]
+
+# print(my_lambdas)
+
+# вызов лямбды из списка
+# print(my_lambdas[2](2))
+
+# лямбда внутри словаря
+
+
+lambda_dict = {"вычисление суммы": lambda x, y: x + y, "вычисление произведения": lambda x, y: x*y}
+
+# вызов лямбды из словаря 
+# print(lambda_dict["вычисление суммы"](2, 4))
+
+# Лямбда внутри генераторв списка
+
+# создание списка с использоавнием лямбды
+my_list = [(lambda a: a*2)(n) for n in range(10)]
+
+my_list_2 = [(lambda a, b: (a+b)*(a-b))(idx, val) for idx, val in enumerate([10, 20, 30, 40, 50])]
+
+# создание кастомизированного списка на основе другого списка 
+origin_list = [3, 5, 6, 8, 1, 9]
+# лямбда с тернарным условными выражением
+my_list_3 = [(lambda x: 1 if x > 5 else 0)(n) for n in origin_list]
+# print(my_list_3)
+
+# *** Декоратор ***
+
+# декоратор -  паттерн (шаблон) програмиирования (программирования)
+# декоратор - функция, которая добаляет некий доп-й функционал целевой йункции
+
+# создание декоратора
+
+def decorator_1(func):
+    '''
+    func : аргумент, которому присваивается объект целевой функции
+    '''
+    # функция обертка
+    def wrapper():
+        # код, который выполняется до целевой функции
+        print("foo")
+
+        # выполнение целевой функции
+        func()
+
+        # код, который выполняется после целевой функции
+        print("bar")
+    # возврат объекта обертки
+    return wrapper
+
+# целевая функция 
+@decorator_1
+def my_func_1():
+    print("hello")
+
+@decorator_1
+def my_func_2():
+    print("Привет")
+
+# my_func_1()
+# my_func_2()
+
+
+def decorator_2(func):
+    '''
+    func : аргумент, которому присваивается объект целевой функции
+    '''
+    # функция обертка c аргументами
+    def wrapper(a, b):
+        # код, который выполняется до целевой функции
+        print("foo")
+
+        # выполнение целевой функции с передачей парамметров
+        func(a, b)
+
+        # код, который выполняется после целевой функции
+        print("bar")
+    # возврат объекта обертки
+    return wrapper
+
+@decorator_2
+def my_func_3(x, y):
+    print(x+y)
+
+my_func_3(10, 5)

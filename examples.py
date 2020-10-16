@@ -54,9 +54,30 @@ population = {"Moscow" : 12615000, 'Ufa' : 1124000,'Omsk' : 1165000, 'Tula' : 48
 population["Kiev"] = 24087492 #добавление 1го элемента 
 population.update({"Penza" : 47593270, "Piter" : 5284905,"Kursk" : 1937920 }) # добавлене несокольких элементов 
 # city = input('ввведите город:')
-print(population)
+# print(population)
 
 # numbers = {'Vanya' : 23, 'Anya' : 47, 'Katya' : 16, 'Olya': 22}
 # age = input('введите имя:')
 # print('Возраст:', numbers.get(age,"Нет данных"))   
 
+# Цикл while
+
+# x = 0
+# while x < 10:
+#     print(x, x**2)
+#     x +=1
+# print("конец программы")
+
+
+# break - оператор выход из цикла
+i = 0
+while i < 3:
+    x = float(input('Делимое:'))
+    y = float(input('Делитель:'))
+    if y == 0:
+        print("на ноль делить нельзя!")
+        break
+    print('частное:', x / y)
+    i +=1
+else:
+    print("цикл окончен") 
