@@ -87,10 +87,106 @@ class Human(Animal):
     def info(self):
         print(f"I'm human, my name is {self.name} ")
 
-john = Human("John", 2)
-john.move()
-john.info()
+# john = Human("John", 2)
+# john.move()
+# john.info()
+
+# **** Принцип Полиморфизма ****
+
+# поли + морф = разные формы чего-то одного (информаицонные объекты )
+
+# 1 вид. Разные классы могут обладать методами с одним именем, но с разной функциональностью 
+
+# родительский класс
+class A:
+    def method_1(self, arg):
+        print(f"Data: {arg}")
+
+# дочерний класс у которого родительский метод переопределен 
+class A_1(A):
+    def method_1(self, a, b):
+        print(f"Data: {a + b}")
 
 
+# создание экземпляров классов
+a = A()
+a_1 = A_1()
+
+# вызов методов у экзмемпляров 
+# a.method_1(100)
+# a_1.method_1(20, 50)
+
+# * 2 вид. применение "Магических методов" (методы перегрузки операторов)
+
+#  метод, который позволяет из экземпляра (объекта) класса "делать" функцию 
+
+class CustomSum:
+    def __init__(self, param):
+        self.coeff = param
+
+    def ___call___(self, a, b):
+        res = (a + b) * self.coeff
+        print(f"Result: {res}")
+
+    #  маг-метод 
+    def __str__(self):
+        return f"Custom Summator. Coeff: {self.coeff}"
+
+sum_1 = CustomSum(1.5)
+sum_2 = CustomSum(2.44)
+
+# Эффект магического метода 
+# sum_1 = (3, 5)
+# sum_2 = (3, 5) 
+
+# print(sum_1)
+
+# **** Инкапсуляция ****
+# инкапсуляция - сркытие атрибутов и/или методов
+
+class B:
+    def __init__(self, arg):
+        # не строгая инкапсулированный атрибут
+        self._attr = arg
+        # строго инкапсулированный атрибут
+        self.__attr2 = 200
 
 
+    # не строгая инкапсулированный атрибут
+    def _method(self):
+        print("hello!")
+    
+    # строго инкапсулированный атрибут
+    def __method_2(self):
+        print("World!")
+
+    # не инкапсулированный метод
+    def method_3(self):
+        self.__method_2()
+
+
+b = B(100) 
+# print(b._attr)
+# b._method()
+
+# command+shift+P - вызов линтера 
+# print(b._B__attr2)
+# b._B__method_2() 
+# b.method_3()
+
+# *** Композиция (Агрегация) ****
+
+# использовние экземпляров одних классов внутри других классов
+
+class C:
+    def __call__(self, a):
+        return a ** 2
+
+class D:
+    def method(self, x):
+        c = C() # создается объект класса D
+        res = c(x) + x # здесь D используется в качестве функции
+        print(res)
+
+d = D()
+# d.method(5)
