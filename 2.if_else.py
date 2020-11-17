@@ -57,7 +57,7 @@ b = 10
 # operation = input("Введите символ операции (+, -, *, /): ")
 
 # if operation == "+":
-#     res = num_1 + num_2
+#     res = num_1 + num_2б
 # elif operation == "-":
 #     res = num_1 - num_2
 # elif operation == "*":
