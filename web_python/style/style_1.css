@@ -1,0 +1,27 @@
+/* селектор по тегу  */
+body {
+    /* свойство "цвета фона" */
+    background-color: rgba(204, 145, 233, 0.564);
+}
+
+/* обращение к нескольким тегам
+и настройка одного свойства */
+header, div, footer{
+    /* саойсто "граница" */
+    border: 2px solid red;
+}
+
+div{
+    background-color: olivedrab;
+    color: firebrick;
+}
+/* селектор по классу */
+.content{
+    color: mediumblue;
+}
+.p1{
+    color: mediumspringgreen;
+}
+.p2{
+    color: moccasin;
+}
