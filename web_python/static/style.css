@@ -1,3 +1,35 @@
 header, div.main, footer {
     border: 2px solid pink;
 }
+
+/* header */
+header {
+    background-color: rgb(84, 43, 231);
+    height: 100px;
+    position: relative;
+
+}
+.header__menu {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header__menu a {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+}
+
+/* content */
+.main{
+    background-color: rgb(27, 12, 160);
+    height: 800px;
+}
+
+/* footer */
+    footer {
+    background-color: rgb(235, 15, 224);
+    height: 100px;
+    }
+
+
